@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&display=swap");
+
+:root {
+    --font-display: "Playfair Display", Georgia, serif;
+    --font-body: "DM Sans", system-ui, sans-serif;
+
+    /* Light Mode (Wood & Stone - Cream/Light) */
+    --ws-bg: #f5ecd7;
+    --ws-surface: #ede1cc;
+    --ws-card: #e8d5b0;
+    --ws-card-hover: #dfc5a0;
+    --ws-border: #d4b896;
+    --ws-border-light: #c4a97a;
+    --ws-amber: #c8611a;
+    --ws-amber-light: #e07b39;
+    --ws-amber-glow: #f59240;
+    --ws-amber-muted: #8b4513;
+    --ws-cream: #e8d5b0;
+    --ws-cream-light: #3d2e20; /* ← Changed to dark brown for visibility */
+    --ws-cream-muted: #c4a97a;
+    --ws-stone: #6b5a47;
+    --ws-stone-light: #8b7355;
+    --ws-stone-dark: #3d2e20;
+    --ws-green: #3d4d3a;
+    --ws-green-light: #516648;
+    --ws-text-primary: #3d2e20; /* Dark text on light backgrounds */
+    --ws-text-secondary: #6b5a47; /* Slightly lighter dark text */
+    --ws-text-muted: #8b7355; /* Muted dark text */
+    --ws-button-text: #ffffff; /* White text on colored buttons (amber gradient) */
+    --ws-bg-rgb: 245, 236, 215; /* Light mode RGB */
+    --ws-surface-rgb: 237, 225, 204; /* Light surface RGB */
+    --ws-button-bg: linear-gradient(135deg, #c8611a, #8b4513);
+    --ws-button-border: none;
+    --ws-button-shadow: none;
+    --ws-button-weight: 400;
+    --ws-amber-dark: #8b4513;
+}
+
+/* Dark Mode (Wood & Stone - Original Dark) */
+.dark {
+    --ws-bg: #080604;
+    --ws-surface: #100c08;
+    --ws-card: #1a1310;
+    --ws-card-hover: #221a14;
+    --ws-border: #2e2218;
+    --ws-border-light: #3d2e20;
+    --ws-amber: #c8611a;
+    --ws-amber-light: #e07b39;
+    --ws-amber-glow: #f59240;
+    --ws-amber-muted: #8b4513;
+    --ws-cream: #e8d5b0;
+    --ws-cream-light: #f5ecd7;
+    --ws-cream-muted: #c4a97a;
+    --ws-stone: #6b5a47;
+    --ws-stone-light: #8b7355;
+    --ws-stone-dark: #3d2e20;
+    --ws-green: #3d4d3a;
+    --ws-green-light: #516648;
+    --ws-text-primary: #f0e6d3;
+    --ws-text-secondary: #c4a97a;
+    --ws-text-muted: #7a6548;
+    --ws-button-text: #ffffff; /* White text on colored buttons (amber gradient) */
+    --ws-bg-rgb: 8, 6, 4; /* Dark mode RGB */
+    --ws-surface-rgb: 16, 12, 8; /* Dark surface RGB */
+    --ws-button-bg: linear-gradient(
+        135deg,
+        var(--ws-amber),
+        var(--ws-amber-dark)
+    );
+    --ws-button-border: 1px solid rgba(200, 97, 26, 0.5);
+    --ws-button-shadow: 0 4px 16px rgba(200, 97, 26, 0.3);
+    --ws-button-weight: 600;
+    --ws-amber-dark: #5e2f0d;
+}
+
+body {
+    background-color: var(--ws-bg) !important;
+    font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-display);
+}
+
+::placeholder {
+    color: var(--ws-text-muted) !important;
+    opacity: 0.6;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--ws-surface);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--ws-amber-muted);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--ws-amber);
+}
+
+* {
+    box-sizing: border-box;
+}
